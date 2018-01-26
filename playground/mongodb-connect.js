@@ -9,16 +9,16 @@ MongoClient.connect('mongodb://localhost:27017',
 
      var db = client.db('TodoApp');
 
-    //  db.collection('Todos').insertOne({
-    //      text: 'Something to one',
-    //      completed: false
-    //  }, (err, result)=>{
-    //      if (err) {
-    //          return console.log('Unable to insert');
-    //      }
-    //      console.log(JSON.stringify(result.ops, undefined, 2));
+     db.collection('Todos').insertOne({
+         text: 'Eat',
+         completed: false
+     }, (err, result)=>{
+         if (err) {
+             return console.log('Unable to insert');
+         }
+         console.log(JSON.stringify(result.ops, undefined, 2));
 
-    //  })
+     })
 
     // db.collection('Users').insertOne({
     //     name: 'Renee',

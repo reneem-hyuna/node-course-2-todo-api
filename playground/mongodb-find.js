@@ -23,8 +23,8 @@ MongoClient.connect('mongodb://localhost:27017',
     //     console.log('Unable to fetch todos',err)
     // })
 
-    db.collection('Users').find(
-        {name:'Renee'}).toArray().then((docs)=>{
+    db.collection('Todos').find(
+        {text:'Eat'}).toArray().then((docs)=>{
          console.log('Todos');
          console.log(JSON.stringify(docs, undefined, 2))
     }, (err)=>{
@@ -34,6 +34,12 @@ MongoClient.connect('mongodb://localhost:27017',
     //client.close();
 
 });
+
+// deleteMany
+
+// deleteOne
+
+// findOneAndDelete
 
 // 5a68d2752653b454d5ce3ad8
 
